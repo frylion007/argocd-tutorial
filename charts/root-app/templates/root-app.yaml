@@ -8,7 +8,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL:  
+    repoURL: https://github.com/frylion007/argocd-tutorial.git  
     path: charts/root-app/
     targetRevision: HEAD
   destination:
