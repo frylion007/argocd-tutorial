@@ -8,3 +8,28 @@ argo-cd:
   server:
     extraArgs:
       - --insecure
+    ingress:
+      enabled: true
+      hosts:
+        - argo-tutorial.lilithgame.com
+      paths:
+        - /
+      pathType: Prefix
+      tls: 
+        - secretName: lilithgame.com 
+          hosts:
+            - argo-tutorial.lilithgame.com 
+      https: true
+    ingressGrpc:
+      enabled: true
+      hosts:
+        - argo-tutorial-grpc.lilithgame.com
+      paths:
+        - /
+      pathType: Prefix
+      tls: 
+        - secretName: lilithgame.com               
+          hosts:
+            - argo-tutorial-grpc.lilithgame.com 
+      https: true
+
